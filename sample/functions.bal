@@ -6,3 +6,12 @@ function reserveInventory(OrderInfo orderInfo) returns error? {
     log:printInfo("Inventory reserved");
 
 }
+
+@workflow:Activity
+function sendEmail(OrderInfo orderInfo) returns error? {
+    log:printInfo(string `Email sent to ${orderInfo.customerEmail}`);
+}
+
+@workflow:Activity
+function cancelOrder(OrderInfo orderInfo) returns error? {
+}
